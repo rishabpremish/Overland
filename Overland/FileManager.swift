@@ -1,6 +1,6 @@
 import Foundation
 
-// Checks if a file exsits
+// Checks if a file or folder exsits
 func checkFile(filePath: String) -> Bool {
     let fileManager = FileManager.default
     let exists = fileManager.fileExists(atPath: filePath)
@@ -17,4 +17,11 @@ func listFilesInDirectory(directoryPath: String) -> [String]? {
         print("Something went wrong")
     }
     return nil
+}
+
+// Prints files from a [String]
+func printFiles(files: [String], fileType: String) {
+    for file in files {
+        print(file + " -> " + fileType)
+    }
 }
