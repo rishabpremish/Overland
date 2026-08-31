@@ -1,7 +1,7 @@
 import Foundation
 
 // Checks if a file or folder exsits
-func checkFile(filePath: String) -> Bool {
+func checkExists(filePath: String) -> Bool {
     let fileManager = FileManager.default
     let exists = fileManager.fileExists(atPath: filePath)
     return exists
